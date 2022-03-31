@@ -1,8 +1,10 @@
 package com.hibernate;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.hibernate.dto.Address;
 import com.hibernate.dto.UserDetails;
 
 @SpringBootApplication
@@ -15,9 +17,16 @@ public class HibernateApplication {
 		user.setUserId(1);
 		user.setUserName("First User Arth");
 		
+		Address addr = new Address();
+		
+		addr.setStreet("street name");
+		addr.setCity("city name");
+		
+		//user.setHomeAddress(addr);
+		
 
 		
-		
+	
 		
 		
 		/*
