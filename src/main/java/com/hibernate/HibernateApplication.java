@@ -42,6 +42,14 @@ public class HibernateApplication {
 		
 		//for ending the transaction first get the transaction and then commit 
 		session.getTransaction().commit();
+		session.close();
+		user = null;
+		 
+		//open the another session and but we don't have to create another sessionFactory because it is expensive call.
+		session = sessionFactory.openSession();
+		session.beginTransaction();
+		//object of the UserDetails class we want to retrieve with primary key 1.
+		user =(UserDetails)session.get(UserDetails.class,1);
 		
 		*/
 		
